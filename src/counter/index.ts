@@ -12,7 +12,11 @@ incrementByInputElem.addEventListener("change", () => {
 });
 
 appElem.addEventListener("click", e => {
-  const action = e.target?.getAttribute("action");
+  const target = e.target;
+  if (!(target instanceof Element)) {
+    return null;
+  }
+  const action = target.getAttribute("data-action");
   if (action === "+") {
     currentValue += incrementByValue;
   } else if (action === "-") {
@@ -24,7 +28,3 @@ appElem.addEventListener("click", e => {
   }
   currentValueElem.textContent = String(currentValue);
 });
-
-// appElem.addEventListener("change", e => {
-//   console.log("change detected at appElem", e.target.value);
-// });
