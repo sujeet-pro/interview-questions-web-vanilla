@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
-    <script type="module" src="./index.ts"></script>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="..">Home</a>
-            </li>
-        </ul>
-    </nav>
-    <h1>Counter</h1>
-</body>
+  </head>
+  <body>
+    <div id="app">
+      <h2 id="current-value">0</h2>
+      <div>
+        <button action="+">Increment</button>
+        <button action="-">Decrement</button>
+        <button action="0">Reset</button>
+      </div>
+      <div>
+        <label for="increment-by">Increment By</label>
+        <input id="increment-by" type="number" step="1" value="1" min="1" />
+      </div>
+    </div>
+  </body>
 </html>

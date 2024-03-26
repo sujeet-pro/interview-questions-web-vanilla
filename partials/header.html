@@ -1,0 +1,33 @@
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .globalHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+  }
+  .global-nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .global-link {
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+</style>
+<header class="globalHeader">
+  <nav class="global-nav">
+    <a class="global-link" href="{{public_base_path}}">UI Challenges</a>
+  </nav>
+  <nav class="global-nav">
+    <a class="global-link" href="https://sujeet.pro">Portfolio</a>
+    <a class="global-link" href="https://sujeet.pro/blog/">Blog</a>
+  </nav>
+</header>
