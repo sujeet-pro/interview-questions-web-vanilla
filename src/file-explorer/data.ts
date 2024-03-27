@@ -1,36 +1,24 @@
-type File = {
-  id: string;
+export type File = {
   name: string;
-  type: "file";
+  type: 'file';
+  size: number;
 };
-type Folder = {
-  id: string;
+export type Folder = {
   name: string;
-  type: "folder";
+  type: 'folder';
   children: (Folder | File)[];
 };
 
-export const data: Folder = {
-  id: "1",
-  name: "/",
-  type: "folder",
-  children: [
-    {
-      id: "2",
-      name: "package.json",
-      type: "file",
-    },
-    {
-      id: "3",
-      name: "src",
-      type: "folder",
-      children: [
-        {
-          id: "4",
-          name: "index.js",
-          type: "file",
-        },
-      ],
-    },
-  ],
+const baseUrl = import.meta.env.BASE_URL;
+
+export async function getTree(): Promise<Folder> {
+  const res = await fetch(`${baseUrl}/file-tree.json`);
+  const data = await res.json();
+  return data;
+}
+
+export const iconMap = {
+  file: '📄',
+  folderClosed: '📁',
+  folderOpen: '📂',
 };

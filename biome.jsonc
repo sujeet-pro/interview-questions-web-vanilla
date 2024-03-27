@@ -17,6 +17,7 @@
   },
   "javascript": {
     "formatter": {
+      "quoteStyle": "single",
       "arrowParentheses": "asNeeded",
       "jsxQuoteStyle": "double",
       "semicolons": "always",

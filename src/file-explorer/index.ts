@@ -1,8 +1,7 @@
-function initBmi() {
-  console.log("Iniside BMI init");
+import { getTree } from './data';
+import { renderFolderContent } from './render';
 
-  const a = "3";
-  return a;
-}
-
-initBmi();
+getTree().then(folder => {
+  const [treeNodes] = renderFolderContent(folder);
+  document.getElementById('app')!.appendChild(treeNodes);
+});
