@@ -1,0 +1,89 @@
+<!-- Auto Generated, DO NOT UPDATE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Counter | Web Practice Apps
+  </title>
+  
+  <script>
+    (function() {
+      const currentTheme = sessionStorage.getItem('theme') || 'default';
+      if(currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else if(currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })()
+  </script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+  <header class="navbar bg-base-200 shadow-sm">
+    <div class="flex-1">
+      <a href="/interview-questions-web-vanilla/" class="btn btn-ghost text-xl">Web Practice Apps</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal m-0 p-0">
+        <li>
+          <!-- Apps Dropdown -->
+          <div class="dropdown dropdown-end p-0">
+            <div tabindex="0" role="button" class="btn btn-ghost">
+              Counter
+              <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 p-2 shadow-2xl">
+              <li><a href="/interview-questions-web-vanilla/apps/counter/"> Counter </a></li><li><a href="/interview-questions-web-vanilla/apps/file-explorer/"> File Explorer </a></li><li><a href="/interview-questions-web-vanilla/apps/popover-menu/"> Popover Menu </a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!-- Theme Dropdown -->
+          <div class="dropdown dropdown-end p-0">
+            <div tabindex="0" role="button" class="btn btn-ghost">
+              Theme
+              <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+              </svg>
+            </div>
+            <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 p-2 shadow-2xl">
+              <li>
+                <input type="radio" name="theme-dropdown" class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start" aria-label="Default" value="default" />
+              </li>
+              <li>
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Light" value="light" />
+              </li>
+              <li>
+                <input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Dark" value="dark" />
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  
+  <div id="root" class="flex-grow">Loading...</div>
+  
+
+  <footer class="footer sm:footer-horizontal footer-center bg-base-200 text-base-content p-4">
+    <aside>
+      <p>Copyright © 2025 - All right reserved by Sujeet Jaiswal</p>
+    </aside>
+  </footer>
+
+  
+  <script type="module" src="./index.ts"></script>
+  
+
+</body>
+
+</html>

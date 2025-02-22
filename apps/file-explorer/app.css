@@ -1,0 +1,28 @@
+/* Write app specific global styles here */
+.icon-folder-open {
+    display: none;
+}
+.icon-folder-closed {
+    display: initial;
+}
+
+details[open] > summary {
+    .icon-folder-open {
+        display: initial;
+    }
+    .icon-folder-closed {
+        display: none;
+    }
+}
+
+
+summary {
+    list-style: none;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+
+ul {
+    margin-left: 1rem;
+}
