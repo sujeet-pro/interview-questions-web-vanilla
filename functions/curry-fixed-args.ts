@@ -21,10 +21,10 @@
  * const curriedAdd2 = curry(add);
  * curriedAdd2(1, 2)(3) // Returns 6
  */
-export default function curry<T extends (...args: any[]) => any>(
+export default function curryFixedArgs<T extends (...args: any[]) => any>(
     callback: T,
     ...initialArgs: Parameters<T>[number][]
-): ((...args: Parameters<T>[number][]) => ReturnType<T> | ReturnType<typeof curry<T>>) {
+): ((...args: Parameters<T>[number][]) => ReturnType<T> | ReturnType<typeof curryFixedArgs<T>>) {
     // Track total expected arguments based on callback function
     const expectedArgs = callback.length;
     
@@ -32,7 +32,7 @@ export default function curry<T extends (...args: any[]) => any>(
     const accumulatedArgs = [...initialArgs];
 
     // Return curried function that collects arguments
-    return function curried(...newArgs: Parameters<T>[number][]): ReturnType<T> | ReturnType<typeof curry<T>> {
+    return function curried(...newArgs: Parameters<T>[number][]): ReturnType<T> | ReturnType<typeof curryFixedArgs<T>> {
         // Add new arguments to accumulated args
         const args = [...accumulatedArgs, ...newArgs];
 
@@ -42,6 +42,8 @@ export default function curry<T extends (...args: any[]) => any>(
         }
 
         // Otherwise return curried function with accumulated args
-        return curry(callback, ...args);
+        return curryFixedArgs(callback, ...args);
     };
 }
+
+
