@@ -6,7 +6,6 @@ function initThemeController() {
   
     // Get current theme from session storage
     const currentTheme = sessionStorage.getItem("theme") || "default";
-    console.log(themeRadios, currentTheme);
     // Set initial checked state
     themeRadios.forEach((radio) => {
       if (radio.value === currentTheme) {

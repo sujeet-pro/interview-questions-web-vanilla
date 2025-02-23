@@ -16,6 +16,7 @@
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "app:gen": "tsx --env-file=.env-script scripts/generate-new-app.ts",
+    "postapp:gen": "npm run app:update",
     "app:update": "tsx --env-file=.env-script scripts/update-apps.ts"
   },
   "devDependencies": {
