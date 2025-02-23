@@ -7,10 +7,8 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    Web Practice Apps | Web Practice Apps
+    Stop Watch | Web Practice Apps
   </title>
-  
-  <link rel="stylesheet" href="./scripts/_template/index.css" />
   
   <script>
     (function() {
@@ -36,7 +34,7 @@
           <!-- Apps Dropdown -->
           <div class="dropdown dropdown-end p-0">
             <div tabindex="0" role="button" class="btn btn-ghost">
-              Apps
+              Stop Watch
               <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
                 <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
               </svg>
@@ -73,31 +71,7 @@
   </header>
 
   
-  <main class="container mx-auto p-8 flex-grow">
-    <ul class="space-y-4">
-      
-      <li><a href="/interview-questions-web-vanilla/apps/counter/" class="text-blue-500 hover:underline">
-          Counter
-        </a></li>
-      
-      <li><a href="/interview-questions-web-vanilla/apps/file-explorer/" class="text-blue-500 hover:underline">
-          File Explorer
-        </a></li>
-      
-      <li><a href="/interview-questions-web-vanilla/apps/infinite-scroll/" class="text-blue-500 hover:underline">
-          Infinite Scroll
-        </a></li>
-      
-      <li><a href="/interview-questions-web-vanilla/apps/popover-menu/" class="text-blue-500 hover:underline">
-          Popover Menu
-        </a></li>
-      
-      <li><a href="/interview-questions-web-vanilla/apps/stop-watch/" class="text-blue-500 hover:underline">
-          Stop Watch
-        </a></li>
-      
-    </ul>
-  </main>
+  <div id="root" class="flex-grow">Loading...</div>
   
 
   <footer class="footer sm:footer-horizontal footer-center bg-base-200 text-base-content p-4">
@@ -107,7 +81,7 @@
   </footer>
 
   
-  <script type="module" src="./shared/theme-controller.ts"></script>
+  <script type="module" src="./index.ts"></script>
   
 
 </body>
