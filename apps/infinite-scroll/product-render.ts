@@ -24,7 +24,7 @@ import { Product } from "./product-paginated"
  */
 function renderProductItem(product: Product) {
     const li = document.createElement('li')
-    li.classList.add('border-b', 'p-2', 'flex', 'flex-row')
+    li.classList.add('border-b', 'border-dashed', 'p-2', 'flex', 'flex-row')
     
     const idSpan = document.createElement('span')
     idSpan.classList.add('text-sm', 'text-gray-500', 'w-12')
@@ -69,19 +69,28 @@ export function renderProductList(products: Product[]) {
  *   <ul class="h-60 w-60 border" id="product-list"></ul>
  * </section>
  */
-export function getSetupHTML() {
+function getProductListContainer(title: string) {
   const section = document.createElement('section')
   
   const heading = document.createElement('h2')
-  heading.classList.add('text-2xl', 'font-bold')
-  heading.textContent = 'Product List'
+  heading.classList.add('text-2xl', 'font-bold', 'mb-4')
+  heading.textContent = title
   
   const list = document.createElement('ul')
   list.classList.add('h-60', 'w-60', 'border', 'overflow-y-auto')
-  list.id = 'product-list'
   
   section.appendChild(heading)
   section.appendChild(list)
   
-  return section.outerHTML
+  return {section, list}
+}
+
+export function getSetupHTML() {
+    const container = document.createElement('div')
+    container.className = 'flex flex-row gap-x-4 gap-y-12 flex-wrap'
+    const {section: section1, list: list1} = getProductListContainer('Scroll Event')
+    const {section: section2, list: list2} = getProductListContainer('Intersection Observer')
+    container.append(section1)
+    container.append(section2)
+    return {container, list1, list2}
 }
